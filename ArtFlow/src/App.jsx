@@ -1,7 +1,18 @@
-import React from 'react'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from './pages/Home'
+import SignIn from './pages/SignIn'
+import About from './pages/About'
+import SignUp from './pages/SignUp'
 
 export default function App() {
-  return (
-    <div className='text-red-800'>App</div>
+  return ( 
+  <BrowserRouter>
+  <Routes>
+    <Route path='/' element={ <Home/>} />
+    <Route path='/Sign-in' element={ <SignIn/>} />
+    <Route path='/Sign-up' element={ <SignUp/>} />
+    <Route path='/about' element={ <About/>} />
+  </Routes>
+  </BrowserRouter>
   )
 }
